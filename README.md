@@ -12,9 +12,10 @@ Tienda
 
 ## 🚀 Instalación y Uso
 - Clonar el repositorio:
-// git clone https://github.com/tuusuario/ecoshop.git
-cd ecoshop //
-Abrir el proyecto:
+``` git clone https://github.com/tuusuario/ecoshop.git
+cd ecoshop ```
+
+- Abrir el proyecto:
 
 Abre index.html en tu navegador favorito.
 Navegar y explorar:
