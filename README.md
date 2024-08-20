@@ -21,7 +21,7 @@ Tienda
   </br>
 ``` git clone https://github.com/Irene-Frias/tienda.git ```
   </br>
-``` cd ecoshop ```
+``` cd tienda ```
 - Abrir el proyecto:
   </br>Abre index.html en tu navegador favorito.
 - Navegar y explorar:
