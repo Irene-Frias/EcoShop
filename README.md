@@ -1,20 +1,20 @@
 # Tienda
 ## 📁 Estructura del Proyecto
-Tienda
+**Tienda**
 </br>
-│  ├── img/              # Imágenes de productos y otros recursos gráficos
+│  ├── **img/**              *(imágenes de productos y otros recursos gráficos)*
+</br> 
+│  ├── **videos/**           *(imágenes de productos y otros recursos gráficos)*
 </br>
-│  ├── videos/           # Imágenes de productos y otros recursos gráficos
+├── **index.html**          *(página principal de la tienda)*
 </br>
-├── index.html        # Página principal de la tienda
+├── **styles.css**          *(estilos principales de la tienda)*
 </br>
-├── styles.css      # Estilos principales de la tienda
+├── **script.js**           *(lógica del carrito de compras y funcionalidades de la tienda)*
 </br>
-├── script.js      # Lógica del carrito de compras y funcionalidades de la tienda
+├── **...**                 *(otros archivos referentes a la página principal)*
 </br>
-├── ...               # Otros archivos referentes a la página principal
-</br>
-└── README.md         # Este archivo
+└── **README.md**           *(este archivo)*
 
 ## 🚀 Instalación y Uso
 - Clonar el repositorio:
