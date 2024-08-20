@@ -1,13 +1,19 @@
 # Tienda
 ## 📁 Estructura del Proyecto
 Tienda
+</br>
 ├── index.html        # Página principal de la tienda
-├── css/
-│   ├── styles.css    # Estilos principales de la tienda
-├── js/
-│   ├── app.js        # Lógica del carrito de compras y funcionalidades de la tienda
-├── img/
-│   ├── ...           # Imágenes de productos y otros recursos gráficos
+</br>
+  ├── styles.css      # Estilos principales de la tienda
+</br>
+   ├── script.js      # Lógica del carrito de compras y funcionalidades de la tienda
+</br>
+├── img/              # Imágenes de productos y otros recursos gráficos
+</br>
+├── videos/           # Imágenes de productos y otros recursos gráficos
+</br>
+├── ...               # Otros archivos referentes a la página principal
+</br>
 └── README.md         # Este archivo
 
 ## 🚀 Instalación y Uso
@@ -34,4 +40,5 @@ Si tienes ideas para mejorar la tienda, no dudes en hacer un fork del proyecto y
 
 ## 👩‍💻 Desarrolladora
 Irene Frías Ramos - Desarrolladora Junior
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/IreneFrías/) | GitHub
+<br> </br>
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/IreneFrías/)
