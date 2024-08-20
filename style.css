@@ -13,13 +13,13 @@ body {
     padding: 0 25px;
 }
 
-/*videos*/
+/* videos */
 .video-container {
     margin: 50px; /* Ajusta este valor para cambiar el margen */
     text-align: center;
 }
 
-/*Finalización de compra */
+/* Finalización de compra */
 /* Estilos para el modal */
 .modal {
     display: none;
