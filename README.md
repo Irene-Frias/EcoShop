@@ -2,15 +2,15 @@
 ## 📁 Estructura del Proyecto
 Tienda
 </br>
+│  ├── img/              # Imágenes de productos y otros recursos gráficos
+</br>
+│  ├── videos/           # Imágenes de productos y otros recursos gráficos
+</br>
 ├── index.html        # Página principal de la tienda
 </br>
-  ├── styles.css      # Estilos principales de la tienda
+├── styles.css      # Estilos principales de la tienda
 </br>
-   ├── script.js      # Lógica del carrito de compras y funcionalidades de la tienda
-</br>
-├── img/              # Imágenes de productos y otros recursos gráficos
-</br>
-├── videos/           # Imágenes de productos y otros recursos gráficos
+├── script.js      # Lógica del carrito de compras y funcionalidades de la tienda
 </br>
 ├── ...               # Otros archivos referentes a la página principal
 </br>
