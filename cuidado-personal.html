@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="title" content="Tienda de Productos Naturales"/>
+    <meta name="description" content="Las mejores marcas de productos de parafarmacia, cosmética natural, dietética y medicina natural. ¡Consulta todas las ofertas y promociones de Naturitas!"/>
+    <meta name="keywords" content="parafarmacia, cosmética natural, alimentación bio, productos para la salud, productos bienestar"/>
+    <meta name="robots" content="INDEX,FOLLOW"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <title>ECOLÓGICO</title>
+    <link rel="icon" href="imagenes/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <script src="script.js"></script>
+
+<header class="header">
+    <div class="menu container">
+        <img src="imagenes/logo.png" id="logo" alt="logo" class="logo" style="width: 82px; height: 82px;">
+        <input type="checkbox" id="menu-toggle" />
+        <label for="menu-toggle" class="menu-icon">
+            <img src="imagenes/menu.png" alt="menu">
+        </label>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="info.html">Información</a></li>
+            </ul>
+        </nav>
+        <div class="cart-container">
+            <img src="imagenes/carrito.png" id="carrito-icon" alt="carrito" style="width: 70px; height: 70px;">
+            <div id="carrito-dropdown" class="cart-dropdown">
+                <table id="lista-carrito">
+                    <thead>
+                        <tr>
+                            <th>Imagen</th>
+                            <th>Nombre</th>
+                            <th>Precio</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+                <a href="#" id="ver-carrito" class="btn-2">Ver carrito</a>
+            </div>
+        </div>
+    </div>
+</header>
+<br>
+</br>
+
+
+<div class="search-filter container">
+    <input type="text" id="search" placeholder="Buscar productos..." class="search-box">
+    <select id="filter" class="filter-dropdown">
+        <option value="all">Todos</option>
+        <option value="botella">Botella</option>
+        <option value="pajitas">Pajitas</option>
+        <option value="tabla">Tabla para Cortar</option>
+        <option value="detergente">Detergente</option>
+        <option value="bolsa">Bolsa Reutilizable</option>
+        <option value="cepillos">Cepillos de dientes</option>
+        <option value="envoltura">Envoltura de cera de abeja</option>
+        <option value="compostador">Compostador Doméstico</option>
+    </select>
+</div>
+
+<!-- VER CARRITO -->
+
+ <section id="carrito-completo" class="cart-full container" style="display: none;">
+    <h2>Carrito de Compras</h2>
+    <table id="carrito-lista-completa">
+        <thead>
+            <tr>
+                <th>Imagen</th>
+                <th>Nombre</th>
+                <th>Precio</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <p id="total-precio"></p>
+    <a href="#" class="btn-2" id="checkout-btn">Finalizar Compra</a>
+</section>
+
+<!-- FINALIZACIÓN DE LA COMPRA -->
+
+<div id="checkout-modal" class="modal" style="display: none;">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Finalizar Compra</h2>
+        <form id="checkout-form">
+            <label for="account-number">Número de Cuenta:</label>
+            <input type="text" id="account-number" name="account-number" required>
+            
+            <label for="payment-method">Método de Pago:</label>
+            <select id="payment-method" name="payment-method" required>
+                <option value="credit-card">Tarjeta de Crédito</option>
+                <option value="paypal">PayPal</option>
+                <option value="bank-transfer">Transferencia Bancaria</option>
+            </select>
+            
+            <div id="credit-card-info" style="display: none;">
+                <label for="cc-number">Número de Tarjeta:</label>
+                <input type="text" id="cc-number" name="cc-number">
+                <label for="cc-expiry">Fecha de Expiración (MM/AA):</label>
+                <input type="text" id="cc-expiry" name="cc-expiry">
+                <label for="cc-cvc">CVC:</label>
+                <input type="text" id="cc-cvc" name="cc-cvc">
+            </div>
+
+            <button type="submit" class="btn-2">Enviar</button>
+        </form>
+    </div>
+</div>
+<br>
+
+
+<!--- Productos -->
+    <h2 class="products container" id="productos"></h2>
+
+    <section class="ofert container" class="producto">
+        <div class="ofert-1" data-id="1">
+            <div class="ofert-img">
+                <br>
+                <img src="imagenes/productos/cuidado personal/aceite-protector.png" alt="aceite-protector" style="width: 400px; height: 400px;">
+                <br><br>
+            </div>
+            <div class="ofert-txt">
+                <h3>Aceite Protector</h3>
+                <p class="descripcion">Los aceites protectores naturales suelen estar
+                    <br> hechos de ingredientes orgánicos, libres de químicos tóxicos, 
+                    <br>y son biodegradables, reduciendo el impacto ambiental.</p>
+                <p class="precio">12,00 €</p><br>
+                <a href="#" class="btn-2 add-to-cart">Añadir al carrito</a>
+            </div>
+        </div>
+
+        <div class="ofert-1" data-id="15">
+            <div class="ofert-img">
+                <br>
+                <img src="imagenes/productos/cuidado personal/crema-hidratante.png" alt="crema-hidratante" style="width: 400px; height: 400px;">
+                <br><br>
+            </div>
+            <div class="ofert-txt">
+                <h3>Crema Hidratante</h3>
+                <p class="descripcion">Las cremas hidratantes ecológicas están formuladas
+                    <br> con ingredientes naturales y orgánicos que no dañan el medio 
+                    <br>ambiente. Además, sus envases suelen ser reciclables.</p>
+                <p class="precio">15,00 €</p><br>
+                <a href="#" class="btn-2 add-to-cart">Añadir al carrito</a>
+            </div>
+        </div>
+
+        <div class="ofert-1" data-id="16">
+            <div class="ofert-img">
+                <br>
+                <img src="imagenes/productos/cuidado personal/toallitas-humedas.png" alt="toallitas-humedas" style="width: 400px; height: 400px;">
+                <br><br>
+            </div>
+            <div class="ofert-txt">
+                <h3>Toallitas Jabonosas <br>(de un solo uso)</h3>
+                <p class="descripcion">Estas toallitas están hechas de materiales biodegradables
+                    <br>y son libres de químicos nocivos, lo que las hace menos dañinas 
+                    <br>para el medio ambiente.</p>
+                <p class="precio">4,20 €</p><br>
+                <a href="#" class="btn-2 add-to-cart">Añadir al carrito</a>
+            </div>
+        </div>
+
+        <div class="ofert-1" data-id="17">
+            <div class="ofert-img">
+                <br>
+                <img src="imagenes/productos/cuidado personal/peine.png" alt="peine" style="width: 400px; height: 400px;">
+                <br><br>
+            </div>
+            <div class="ofert-txt">
+                <h3>Peine</h3>
+                <p class="descripcion">Los peines ecológicos están hechos de materiales 
+                    <br>sostenibles como madera o bambú, reduciendo el uso de plásticos 
+                    <br>y minimizando el impacto ambiental.</p>
+                <p class="precio">5,48 €</p><br>
+                <a href="#" class="btn-2 add-to-cart">Añadir al carrito</a>
+            </div>
+        </div>
+
+        <div class="ofert-1" data-id="18">
+            <div class="ofert-img">
+                <img src="imagenes/productos/cuidado personal/cepillos-de-dientes-de-bambú.png" alt="Cepillos-de-dientes-Bambu" style="width: 400px; height: 400px;">
+            </div>
+            <div class="ofert-txt">
+                <h3>Cepillos de dientes de Bambú</h3>
+                <p class="descripcion">El bambú tiene propiedades antimicrobianas naturales 
+                    <br>que ayudan a mantener el cepillo de dientes más limpio entre usos.
+                    <br>Los cepillos de dientes de bambú suelen estar libres de BPA y otros 
+                    <br>productos químicos potencialmente dañinos que se pueden encontrar 
+                    <br>en los cepillos de plástico.</p>
+                <p class="precio">0,89 €</p><br>
+                <a href="#" class="btn-2 add-to-cart">Añadir al carrito</a>
+            </div>
+        </div>
+
+        <div class="ofert-1" data-id="19">
+            <div class="ofert-img">
+                <br>
+                <img src="imagenes/productos/cuidado personal/pastilla de jabon.png" alt="pastilla de jabón" style="width: 400px; height: 400px;">
+                <br><br>
+            </div>
+            <div class="ofert-txt">
+                <h3>Patilla de Jabón</h3>
+                <p class="descripcion">Las pastillas de jabón ecológicas están hechas 
+                    <br>con ingredientes naturales y a menudo vienen en envases sin 
+                    <br>plástico, lo que reduce el desperdicio y la contaminación.
+                </p>
+                <p class="precio">2,96 €</p><br>
+                <a href="#" class="btn-2 add-to-cart">Añadir al carrito</a>
+            </div>
+        </div>
+
+        <div class="ofert-1" data-id="20">
+            <div class="ofert-img">
+                <br>
+                <img src="imagenes/productos/cuidado personal/gel-de-baño.png" alt="gel-de-baño" style="width: 400px; height: 400px;">
+                <br><br>
+            </div>
+            <div class="ofert-txt">
+                <h3>Gel de Baño</h3>
+                <p class="descripcion">Los geles de baño ecológicos utilizan ingredientes 
+                    <br>naturales y envases reciclables o biodegradables, reduciendo 
+                    <br>su huella de carbono.</p>
+                <p class="precio">1,78 €</p><br>
+                <a href="#" class="btn-2 add-to-cart">Añadir al carrito</a>
+            </div>
+        </div>
+
+        <div class="ofert-1" data-id="21">
+            <div class="ofert-img">
+                <br>
+                <img src="imagenes/productos/cuidado personal/champú-de-cebolla.png" alt="Champú" style="width: 400px; height: 400px;">
+                <br><br>
+            </div>
+            <div class="ofert-txt">
+                <h3>Champú de Cebolla</h3>
+                <p class="descripcion">Este champú está formulado con ingredientes naturales 
+                    <br>y orgánicos, libres de sulfatos y parabenos, lo que es mejor para 
+                    <br>el medio ambiente y el cabello.</p>
+                <p class="precio">12,95 €</p><br>
+                <a href="#" class="btn-2 add-to-cart">Añadir al carrito</a>
+            </div>
+        </div>
+
+        <div class="ofert-1" data-id="22">
+            <div class="ofert-img">
+                <br>
+                <img src="imagenes/productos/cuidado personal/crema-para-el-pelo.png" alt="crema-para-el-pelo" style="width: 400px; height: 400px;">
+                <br><br>
+            </div>
+            <div class="ofert-txt">
+                <h3>Crema para el Pelo</h3>
+                <p class="descripcion">Las cremas para el pelo ecológicas utilizan ingredientes
+                    <br> sostenibles y a menudo vienen en envases reciclables, ayudando
+                    <br> a reducir el impacto ambiental.</p>
+                <p class="precio">4,49 €</p><br>
+                <a href="#" class="btn-2 add-to-cart">Añadir al carrito</a>
+            </div>
+        </div>
+
+        <div class="ofert-1" data-id="23">
+            <div class="ofert-img">
+                <br>
+                <img src="imagenes/productos/cuidado personal/protector solar.png" alt="protector solar" style="width: 400px; height: 400px;">
+                <br><br>
+            </div>
+            <div class="ofert-txt">
+                <h3>Protector Solar</h3>
+                <p class="descripcion">Los protectores solares ecológicos utilizan 
+                    <br>filtros minerales en lugar de químicos que dañan los arrecifes 
+                    <br>de coral y la vida marina.</p>
+                <p class="precio">9,45 €</p><br>
+                <a href="#" class="btn-2 add-to-cart">Añadir al carrito</a>
+            </div>
+        </div>
+
+        <div class="ofert-1" data-id="24">
+            <div class="ofert-img">
+                <br>
+                <img src="imagenes/productos/cuidado personal/desmaquillante.png" alt="desmaquillante" style="width: 400px; height: 400px;">
+                <br><br>
+            </div>
+            <div class="ofert-txt">
+                <h3>Desmaquillante facial <br>o Agua Micelar Bifásica</h3>
+                <p class="descripcion"> Estos desmaquillantes están hechos con ingredientes 
+                    <br>naturales y envases reciclables, siendo suaves para la piel 
+                    <br>y el medio ambiente.</p>
+                <p class="precio">5,78 €</p><br>
+                <a href="#" class="btn-2 add-to-cart">Añadir al carrito</a>
+            </div>
+        </div>
+
+        <div class="ofert-1" data-id="25">
+            <div class="ofert-img">
+                <br>
+                <img src="imagenes/productos/cuidado personal/rimel.png" alt="rimel" style="width: 400px; height: 400px;">
+                <br><br>
+            </div>
+            <div class="ofert-txt">
+                <h3>Rimel</h3>
+                <p class="descripcion">Los rímeles ecológicos están formulados sin ingredientes
+                    <br> tóxicos y vienen en envases reciclables, reduciendo el 
+                    <br>impacto ambiental.</p>
+                <p class="precio">11,35 €</p><br>
+                <a href="#" class="btn-2 add-to-cart">Añadir al carrito</a>
+            </div>
+        </div>
+
+        <div class="ofert-1" data-id="26">
+            <div class="ofert-img">
+                <br>
+                <img src="imagenes/productos/cuidado personal/esponja de maquillaje.png" alt="esponja de maquillaje" style="width: 400px; height: 400px;">
+                <br><br>
+            </div>
+            <div class="ofert-txt">
+                <h3>Esponja de Maquillaje</h3>
+                <p class="descripcion">Las esponjas de maquillaje ecológicas están hechas
+                    <br> de materiales naturales y biodegradables, evitando el uso de 
+                    <br>plásticos no reciclables.</p>
+                <p class="precio">10,18 €</p><br>
+                <a href="#" class="btn-2 add-to-cart">Añadir al carrito</a>
+            </div>
+        </div>
+
+        <div class="ofert-1" data-id="27">
+            <div class="ofert-img">
+                <br>
+                <img src="imagenes/productos/cuidado personal/base-maquillaje.png" alt="base de maquillaje" style="width: 400px; height: 400px;">
+                <br><br>
+            </div>
+            <div class="ofert-txt">
+                <h3>Base de Maquillaje</h3>
+                <p class="descripcion">Las bases de maquillaje ecológicas están formuladas 
+                    <br>con ingredientes naturales y vienen en envases reciclables, 
+                    <br>minimizando el impacto ambiental.</p>
+                <p class="precio">13,68 €</p><br>
+                <a href="#" class="btn-2 add-to-cart">Añadir al carrito</a>
+            </div>
+        </div>
+
+        </div> 
+        </section>
+        </section>
+
+<!--- Créditos -->
+        <footer>
+            <p>&copy; 2024 Tienda de Productos Naturales. Todos los derechos reservados. Irene Frías Ramos</p>
+        </footer>
+        
+        <script src="script.js"></script> 
+        </body>
+        </html>

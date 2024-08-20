@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="title" content="Tienda de Productos Naturales"/>
+    <meta name="description" content="Las mejores marcas de productos de parafarmacia, cosmética natural, dietética y medicina natural. ¡Consulta todas las ofertas y promociones de Naturitas!"/>
+    <meta name="keywords" content="parafarmacia, cosmética natural, alimentación bio, productos para la salud, productos bienestar"/>
+    <meta name="robots" content="INDEX,FOLLOW"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <title>ECOLÓGICO</title>
+    <link rel="icon" href="imagenes/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <script src="script.js"></script>
+
+<header class="header">
+    <div class="menu container">
+        <img src="imagenes/logo.png" id="logo" alt="logo" class="logo" style="width: 82px; height: 82px;">
+        <input type="checkbox" id="menu-toggle" />
+        <label for="menu-toggle" class="menu-icon">
+            <img src="imagenes/menu.png" alt="menu">
+        </label>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="info.html">Información</a></li>
+            </ul>
+        </nav>
+        <div class="cart-container">
+            <img src="imagenes/carrito.png" id="carrito-icon" alt="carrito" style="width: 70px; height: 70px;">
+            <div id="carrito-dropdown" class="cart-dropdown">
+                <table id="lista-carrito">
+                    <thead>
+                        <tr>
+                            <th>Imagen</th>
+                            <th>Nombre</th>
+                            <th>Precio</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+                <a href="#" id="ver-carrito" class="btn-2">Ver carrito</a>
+            </div>
+        </div>
+    </div>
+</header>
+<br>
+</br>
+
+
+<div class="search-filter container">
+    <input type="text" id="search" placeholder="Buscar productos..." class="search-box">
+    <select id="filter" class="filter-dropdown">
+        <option value="all">Todos</option>
+        <option value="botella">Botella</option>
+        <option value="pajitas">Pajitas</option>
+        <option value="tabla">Tabla para Cortar</option>
+        <option value="detergente">Detergente</option>
+        <option value="bolsa">Bolsa Reutilizable</option>
+        <option value="envoltura">Envoltura de cera de abeja</option>
+        <option value="compostador">Compostador Doméstico</option>
+    </select>
+</div>
+
+<!-- VER CARRITO -->
+
+ <section id="carrito-completo" class="cart-full container" style="display: none;">
+    <h2>Carrito de Compras</h2>
+    <table id="carrito-lista-completa">
+        <thead>
+            <tr>
+                <th>Imagen</th>
+                <th>Nombre</th>
+                <th>Precio</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <p id="total-precio"></p>
+    <a href="#" class="btn-2" id="checkout-btn">Finalizar Compra</a>
+</section>
+
+
+<!-- FINALIZACIÓN DE LA COMPRA -->
+
+<div id="checkout-modal" class="modal" style="display: none;">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Finalizar Compra</h2>
+        <form id="checkout-form">
+            <label for="account-number">Número de Cuenta:</label>
+            <input type="text" id="account-number" name="account-number" required>
+            
+            <label for="payment-method">Método de Pago:</label>
+            <select id="payment-method" name="payment-method" required>
+                <option value="credit-card">Tarjeta de Crédito</option>
+                <option value="paypal">PayPal</option>
+                <option value="bank-transfer">Transferencia Bancaria</option>
+            </select>
+            
+            <div id="credit-card-info" style="display: none;">
+                <label for="cc-number">Número de Tarjeta:</label>
+                <input type="text" id="cc-number" name="cc-number">
+                <label for="cc-expiry">Fecha de Expiración (MM/AA):</label>
+                <input type="text" id="cc-expiry" name="cc-expiry">
+                <label for="cc-cvc">CVC:</label>
+                <input type="text" id="cc-cvc" name="cc-cvc">
+            </div>
+
+            <button type="submit" class="btn-2">Enviar</button>
+        </form>
+    </div>
+</div>
+
+
+<!--- Organización -->
+
+<div class="footer-content container">
+    
+    <div class="link">
+        <img src="imagenes/productos/icono-comida.png" alt="cuidado personal" style="width: 95px; height: 95px;">
+        <br><ul>
+            <li><a href="comida.html">
+                <h2>Alimentos Orgánicos</h2></a>
+            </li></ul>
+    </div>
+
+    <div class="link">
+        <img src="imagenes/productos/icono-cuidado-personal.png" alt="cuidado personal" style="width: 95px; height: 95px;">
+        <br><ul>
+            <li><a href="cuidado-personal.html">
+                <h2>Cuidado Personal</h2></a>
+            </li></ul>
+    </div>
+
+    <div class="link">
+        <img src="imagenes/productos/iconos-otros.png" alt="otros" style="width: 95px; height: 95px;">
+        <br><ul>
+            <li><a href="suplementos.html">
+                <h2>Suplementos</h2></a>
+            </li></ul>
+    </div>
+<!--- Productos -->
+    <h2 class="products container" id="productos"></h2>
+
+    <section class="ofert container" class="producto">
+        <div class="ofert-1" data-id="39">
+            <div class="ofert-img">
+                <img src="imagenes/productos/suplementos/botellas.png" alt="Botella" style="width: 400px; height: 400px;">
+            </div>
+            <div class="ofert-txt">
+                <h3>Botella</h3>
+                <p class="descripcion">Algunas botellas de plástico contienen bisfenol 
+                    <br>A (BPA) y otros químicos que pueden filtrarse en el agua y 
+                    <br>afectar la salud. Las botellas reutilizables de acero inoxidable, 
+                    <br>vidrio o plástico libre de BPA son más seguras.
+                    <br>Tener una botella reutilizable a mano facilita el acceso al agua, 
+                    <br>promoviendo una hidratación adecuada durante el día.</p>
+                <p class="precio">13,16 €</p><br>
+                <a href="#" class="btn-2 add-to-cart">Añadir al carrito</a>
+            </div>
+        </div>
+
+
+        <div class="ofert-1" data-id="40">
+            <div class="ofert-img">
+                <img src="imagenes/productos/suplementos/pajitas-varios.png" alt="pajitas-varios" style="width: 400px; height: 400px;">
+            </div>
+            <div class="ofert-txt">
+                <h3>50 und. de Pajitas <br> de Acero Inoxiáble</h3>
+                <p class="descripcion">A diferencia de las pajitas de plástico, que 
+                    <br>pueden contener BPA y otros productos químicos perjudiciales, 
+                    <br>las pajitas de acero inoxidable son generalmente libres de toxinas.
+                    <br>Las pajitas de acero inoxidable son fáciles de limpiar y esterilizar, 
+                    <br>lo que las hace más higiénicas. No se degradan ni se contaminan 
+                    <br>con el tiempo.</p>
+                <p class="precio">3,39 €</p><br>
+                <a href="#" class="btn-2 add-to-cart">Añadir al carrito</a>
+            </div>
+        </div>
+        
+        <div class="ofert-1" data-id="41">
+            <div class="ofert-img">
+                <img src="imagenes/productos/suplementos/tabla para cortar.png" alt="tabla para cortar" style="width: 400px; height: 400px;">
+            </div>
+            <div class="ofert-txt">
+                <h3>Tabla para cortar</h3>
+                <p class="descripcion">Las tablas de cortar de madera y bambú 
+                    <br>tienen propiedades antimicrobianas naturales que 
+                    <br>ayudan a prevenir el crecimiento de bacterias, 
+                    <br>manteniendo los alimentos más seguros.
+                    <br>Las tablas de cortar de materiales como madera o bambú 
+                    <br>son menos abrasivas en los cuchillos, manteniéndolos 
+                    <br>afilados por más tiempo y reduciendo el riesgo de 
+                    <br>accidentes.</p>
+                <p class="precio">18,95 €</p><br>
+                <a href="#" class="btn-2 add-to-cart">Añadir al carrito</a>
+            </div>
+        </div>
+
+        <div class="ofert-1" data-id="42">
+            <div class="ofert-img">
+                <img src="imagenes/productos/suplementos/detergente.png" alt="detergente" style="width: 400px; height: 400px;">
+            </div>
+            <div class="ofert-txt">
+                <h3>Detergente</h3>
+                <p class="descripcion">Los detergentes ecológicos suelen estar libres 
+                    <br>de fragancias artificiales, colorantes y otros químicos agresivos,
+                    <br>reduciendo el riesgo de irritaciones cutáneas y alergias.
+                    <br>Usar detergentes naturales reduce la liberación de compuestos 
+                    <br>orgánicos volátiles (COV) que pueden afectar la calidad del 
+                    <br>aire en el hogar y la salud respiratoria.</p>
+                <p class="precio">26,95 €</p><br>
+                <a href="#" class="btn-2 add-to-cart">Añadir al carrito</a>
+            </div>
+        </div>
+
+        <div class="ofert-1" data-id="43">
+            <div class="ofert-img">
+                <img src="imagenes/productos/suplementos/bolsa reutilizable.png" alt="bolsa reutilizable" style="width: 400px; height: 400px;">
+            </div>
+            <div class="ofert-txt">
+                <h3>Bolsa Reutilizable</h3>
+                <p class="descripcion">Las bolsas de plástico pueden contener sustancias 
+                    <br>químicas dañinas que pueden transferirse a los alimentos. 
+                    <br>Las bolsas reutilizables, especialmente las de tela, son una 
+                    <br>opción más segura para llevar productos alimenticios.
+                    <br>Las bolsas reutilizables se pueden lavar y mantener limpias, 
+                    <br>reduciendo la posibilidad de contaminación cruzada entre 
+                    <br>alimentos y otros artículos.</p>
+                <p class="precio">0,42 €</p><br>
+                <a href="#" class="btn-2 add-to-cart">Añadir al carrito</a>
+            </div>
+        </div>
+
+        <div class="ofert-1" data-id="44">
+            <div class="ofert-img">
+                <img src="imagenes/productos/suplementos/envoltura de cera de abeja.png" alt="envoltura de cera de abeja" style="width: 400px; height: 400px;">
+            </div>
+            <div class="ofert-txt">
+                <h3>3 paquetes <br>Envoltura de cera de abeja</h3>
+                <p class="descripcion">Las envolturas de cera de abeja son flexibles 
+                    <br>y adherentes, lo que las hace adecuadas para cubrir una 
+                    <br>amplia variedad de alimentos y recipientes.
+                    <br>Se activan con el calor de tus manos, lo que permite 
+                    <br>moldearlas fácilmente alrededor de alimentos y recipientes.</p>
+                <p class="precio">9,98 €</p><br>
+                <a href="#" class="btn-2 add-to-cart">Añadir al carrito</a>
+            </div>
+        </div>
+
+        <div class="ofert-1" data-id="45">
+            <div class="ofert-img">
+                <img src="imagenes/productos/suplementos/compostador doméstico.png" alt="compostador doméstico" style="width: 400px; height: 400px;">
+            </div>
+            <div class="ofert-txt">
+                <h3>Compostador Doméstico</h3>
+                <p class="descripcion">El compostaje doméstico es una excelente 
+                    <br>manera de aprender y enseñar sobre el ciclo de nutrientes y 
+                    <br>la gestión sostenible de residuos. Fomentar el compostaje
+                    <br>en la comunidad puede inspirar a otros a adoptar prácticas 
+                    <br>sostenibles y contribuir colectivamente a un entorno más 
+                    <br>limpio y saludable.</p>
+                <p class="precio">46,99 €</p><br>
+                <a href="#" class="btn-2 add-to-cart">Añadir al carrito</a>
+            </div>
+        </div>
+
+        <div class="ofert-1" data-id="46">
+            <div class="ofert-img">
+                <img src="imagenes/productos/suplementos/fiembrera de vidrio.png" alt="fiembrera de vidrio" style="width: 400px; height: 400px;">
+            </div>
+            <div class="ofert-txt">
+                <h3>4 und. de Fiembrera <br>de Vidrio</h3>
+                <p class="descripcion">El vidrio es 100% reciclable y puede reciclarse 
+                    <br>indefinidamente sin pérdida de calidad. Esto reduce la cantidad
+                    <br>de residuos que terminan en vertederos y la demanda de nuevos 
+                    <br>recursos. Al usar fiambreras de vidrio, se reduce la dependencia 
+                    <br>de envases de plástico de un solo uso, disminuyendo así la 
+                    <br>cantidad de plástico que termina contaminando el medio ambiente.</p>
+                <p class="precio">14,49 €</p><br>
+                <a href="#" class="btn-2 add-to-cart">Añadir al carrito</a>
+            </div>
+        </div>
+
+        <div class="ofert-1" data-id="47">
+            <div class="ofert-img">
+                <img src="imagenes/productos/suplementos/vela-de-cera-de-abeja.png" alt="vela de cera de abeja" style="width: 400px; height: 400px;">
+            </div>
+            <div class="ofert-txt">
+                <h3>Vela de Cera de Abeja</h3>
+                <p class="descripcion">La cera de abeja es un producto natural y renovable, 
+                    <br>producido por las abejas como parte de su proceso de construcción de colmenas.
+                    <br>Es segura para el contacto con la piel y no contiene aditivos químicos dañinos 
+                    <br>como el BPA o los ftalatos que se encuentran en algunos plásticos.
+                    <br>Biodegradable: Es completamente biodegradable y se descompone naturalmente 
+                    <br>en el medio ambiente, lo que la convierte en una opción respetuosa con el 
+                    <br>medio ambiente. Tiene una amplia gama de aplicaciones en diversas industrias,
+                    <br>lo que la convierte en un producto muy versátil y útil.</p>
+                <p class="precio">3,45 €</p><br>
+                <a href="#" class="btn-2 add-to-cart">Añadir al carrito</a>
+            </div>
+        </div>        
+
+        <div class="ofert-1" data-id="48">
+            <div class="ofert-img">
+                <img src="imagenes/productos/suplementos/vaso.png" alt="vaso" style="width: 400px; height: 400px;">
+            </div>
+            <div class="ofert-txt">
+                <h3>Vaso Reutilizable</h3>
+                <p class="descripcion">Al usar un vaso reutilizable en lugar de vasos desechables, 
+                    <br>se reduce la cantidad de residuos generados y se contribuye a la protección 
+                    <br>del medio ambiente. Los vasos reutilizables están fabricados con materiales 
+                    <br>duraderos, como vidrio, acero inoxidable, cerámica o plásticos reciclables, 
+                    <br>lo que los hace más respetuosos con el medio ambiente que los desechables.
+                    <br>Al evitar el uso de vasos desechables, se reduce la necesidad de recursos 
+                    <br>como papel, plástico y energía utilizados en su fabricación y eliminación.
+                    <br>Aunque el costo inicial de un vaso reutilizable puede ser más alto que el 
+                    <br>de los desechables, su reutilización repetida ahorra dinero a largo plazo 
+                    <br>al no tener que comprar vasos desechables con regularidad.
+                    <br>Los vasos reutilizables están hechos de materiales seguros para el consumo
+                    <br>humano y no liberan productos químicos tóxicos como algunos vasos 
+                    <br>desechables de plástico.</p>
+                <p class="precio">1,39 €</p><br>
+                <a href="#" class="btn-2 add-to-cart">Añadir al carrito</a>
+            </div>
+        </div> 
+
+        </section>
+        </section>
+
+        
+    
+
+<section class="blog container">
+    <div class="blog-1">
+        <img src="imagenes/b1.jpg" alt="">
+        <h3>Beneficios de la Cosmética Natural</h3>
+        <p>Descubre cómo la cosmética natural puede mejorar tu piel y salud.</p>
+    </div>
+    <div class="blog-1">
+        <img src="imagenes/b2.jpg" alt="">
+        <h3>Productos Orgánicos para tu Dieta</h3>
+        <p>Incorpora productos orgánicos en tu dieta diaria.</p>
+    </div>
+    <div class="blog-1">
+        <img src="imagenes/b3.jpg" alt="">
+        <h3>Medicina Natural para el Bienestar</h3>
+        <p>Conoce los beneficios de la medicina natural para tu bienestar.</p>
+    </div>
+</section>
+
+<!-- Créditos -->
+<footer>
+    <p>&copy; 2024 Tienda de Productos Naturales. Todos los derechos reservados. Irene Frías Ramos</p>
+</footer>
+
+<script src="script.js"></script> 
+</body>
+</html>

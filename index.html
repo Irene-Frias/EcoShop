@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="title" content="Tienda de Productos Naturales"/>
+    <meta name="description" content="Las mejores marcas de productos de parafarmacia, cosmética natural, dietética y medicina natural. ¡Consulta todas las ofertas y promociones de Naturitas!"/>
+    <meta name="keywords" content="parafarmacia, cosmética natural, alimentación bio, productos para la salud, productos bienestar"/>
+    <meta name="robots" content="INDEX,FOLLOW"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <title>ECOLÓGICO</title>
+    <link rel="icon" href="imagenes/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Contenido de la página -->
+<header class="header">
+    <div class="menu container">
+        <img src="imagenes/logo.png" id="logo" alt="logo" class="logo" style="width: 82px; height: 82px;">
+        <input type="checkbox" id="menu-toggle" />
+        <label for="menu-toggle" class="menu-icon">
+            <img src="imagenes/menu.png" alt="menu">
+        </label>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="info.html">Información</a></li>
+            </ul>
+        </nav>
+        <img src="imagenes/carrito.png" id="carrito-icon" alt="carrito" style="width: 70px; height: 70px; cursor: pointer;">
+        <div id="carrito-dropdown" class="cart-dropdown" style="display: none;">
+            <table id="lista-carrito">
+                <thead>
+                    <tr>
+                        <th>Imagen</th>
+                        <th>Nombre</th>
+                        <th>Precio</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <a href="#" id="ver-carrito" class="btn-2">Ver carrito</a>
+        </div>
+    </div>
+        </div>
+    </div>
+</header>
+<br>
+</br>
+
+<!-- FINALIZACIÓN DE LA COMPRA -->
+
+<div id="checkout-modal" class="modal" style="display: none;">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Finalizar Compra</h2>
+        <form id="checkout-form">
+            <label for="account-number">Número de Cuenta:</label>
+            <input type="text" id="account-number" name="account-number" required>
+            
+            <label for="payment-method">Método de Pago:</label>
+            <select id="payment-method" name="payment-method" required>
+                <option value="credit-card">Tarjeta de Crédito</option>
+                <option value="paypal">PayPal</option>
+                <option value="bank-transfer">Transferencia Bancaria</option>
+            </select>
+            
+            <div id="credit-card-info" style="display: none;">
+                <label for="cc-number">Número de Tarjeta:</label>
+                <input type="text" id="cc-number" name="cc-number">
+                <label for="cc-expiry">Fecha de Expiración (MM/AA):</label>
+                <input type="text" id="cc-expiry" name="cc-expiry">
+                <label for="cc-cvc">CVC:</label>
+                <input type="text" id="cc-cvc" name="cc-cvc">
+            </div>
+
+            <button type="submit" class="btn-2">Enviar</button>
+        </form>
+    </div>
+</div>
+
+<section id="carrito-completo" class="cart-full container" style="display: none;">
+    <h2>Carrito de Compras</h2>
+    <table id="carrito-lista-completa">
+        <thead>
+            <tr>
+                <th>Imagen</th>
+                <th>Nombre</th>
+                <th>Precio</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <p id="total-precio"></p>
+    <a href="#" class="btn-2" id="checkout-btn">Finalizar Compra</a>
+</section>
+
+<!-- Apartados en base a lo que consta la página -->
+<div class="footer-content container">
+    
+    <div class="link">
+        <h2>Cuenta</h2>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width: 55px; height: 55px;">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+        </svg>
+        <ul>
+            <li><a href="login.html">Mi Cuenta</a></li>
+            <li><a href="carrito.html">Historial de Pedidos</a></li>
+            <li><a href="info.html">Lista de Deseos</a></li>
+            <li><a href="blog.html">Boletín de Noticias</a></li>
+        </ul>
+    </div>
+    
+    <div class="link">
+        <h2>Servicios</h2>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width: 55px; height: 55px;">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17 17.25 21A2.652 2.652 0 0 0 21 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 1 1-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 0 0 4.486-6.336l-3.276 3.277a3.004 3.004 0 0 1-2.25-2.25l3.276-3.276a4.5 4.5 0 0 0-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437 1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008Z" />
+        </svg>
+        <ul>
+            <li><a href="servicios.html">Envíos</a></li>
+            <li><a href="servicios.html">Devoluciones</a></li>
+            <li><a href="servicios.html">Atención al Cliente</a></li>
+            <li><a href="productos.html">Ofertas Especiales</a></li>
+        </ul>
+    </div>
+    
+    <div class="link">
+        <h2>Información</h2>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width: 55px; height: 55px;">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z" />
+        </svg>
+        <ul>
+            <li><a href="info.html">Quiénes Somos</a></li>
+            <li><a href="info.html">Política de Privacidad</a></li>
+            <li><a href="info.html">Términos y Condiciones</a></li>
+            <li><a href="info.html">Contacto</a></li>
+        </ul>
+    </div>
+       
+    <div class="link">
+        <h2>Redes Sociales</h2>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width: 55px; height: 55px;">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15.042 21.672 13.684 16.6m0 0-2.51 2.225.569-9.47 5.227 7.917-3.286-.672Zm-7.518-.267A8.25 8.25 0 1 1 20.25 10.5M8.288 14.212A5.25 5.25 0 1 1 17.25 10.5" />
+        </svg>
+        <ul>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">YouTube</a></li>
+        </ul>
+    </div>
+</div>
+
+
+<section class="header-content container">
+    <div class="header-img imagen-normal">
+<!-- La imagen se establecerá como fondo del contenedor -->
+    </div>
+    <div class="header-txt" text-align: center;>
+        <h1 style="color: white" text-align: center;><b>OFERTAS ESPECIALES</b></h1>
+        </br>
+        <a href="#seccion-deseada" class="btn-1" text-align: center;><b>Información</b></a>
+    </div>
+</section>
+
+<!-- Anuncio publicitario -->
+    <section>
+        <div class="video-container">
+            <video width="640" height="360" controls>
+                <source src="videos/cuidado_personal.mp4" type="video/mp4">
+                <source src="videos/cuidado personal.mp4" type="video/ogg">
+            </video>
+        </div></section>
+    <br>
+
+    <div class="ofert-txt">
+        <h3 style="text-align: center;">¡Descubre el secreto de una piel radiante y joven! <br>
+            Transforma tu rutina de cuidado facial con nuestro <br>
+            Serum Antiedad. Experimenta una hidratación profunda 
+            <br>y un aspecto rejuvenecido. 
+            <br>¡Dale a tu piel el amor que se merece!</h3>
+    </div>
+    <br><br>
+
+<!-- Ofertas -->
+    <section class="ofert container" class="producto">
+        <div class="ofert-1" data-id="1">
+            <div class="ofert-img">
+                <img src="imagenes/ofertas/serum_antiedad.png" alt="serum_antiedad" style="width: 400px; height: 400px;">
+            </div>
+            <div class="ofert-txt">
+                <h1>2 x 1</h1>
+                <h3>Serum Antiedad</h3>
+                <p class="precio">64,94 €</p><br>
+                <a href="#" class="btn-2 add-to-cart">Añadir al carrito</a>
+            </div>
+        </div>
+        <div class="ofert-1" data-id="1" id="seccion-deseada">
+            <div class="ofert-img">
+                <img src="imagenes/ofertas/aceite_esencial_lavanda.png" alt="aceite_esencial_lavanda" style="width: 400px; height: 400px;">
+            </div>
+            <div class="ofert-txt">
+                <h1>3 x 2</h1>
+                <h3>Aceite Esencial de Lavanda</h3>
+                <p class="precio">2,79 €</p><br>
+                <a href="#" class="btn-2 add-to-cart">Añadir al carrito</a>
+            </div>
+        </div>
+        </section>
+
+        <section>
+            <div class="video-container">
+                <video width="640" height="360" controls>
+                    <source src="videos/general.mp4" type="video/mp4">
+                    <source src="videos/general.mp4" type="video/ogg">
+                    Tu navegador no soporta la etiqueta de video.
+                </video>
+            </div><br><br>
+
+
+    <section class="ofert container">
+        <div class="ofert-1">
+            <div class="ofert-img">
+                <img src="imagenes/ofertas/bálsamo.png" alt="balsamo" style="width: 400px; height: 400px;">
+            </div>
+            <div class="ofert-txt">
+                <h1>2 x 1</h1>
+                <h3>Bálsamo Labial Vegano</h3>
+                <p class="precio">1,24 €</p><br>
+                <a href="#" class="btn-2 add-to-cart">Añadir al carrito</a>
+            </div>
+        </div>
+        <div class="ofert-1">
+            <div class="ofert-img">
+                <img src="imagenes/ofertas/cubiertos.png" alt="cubiertos" style="width: 400px; height: 400px;">
+            </div>
+            <div class="ofert-txt">
+                <h1>2 x 1</h1>
+                <h3>Cubiertos de Bambú</h3>
+                <p class="precio">9,75 €</p><br>
+                <a href="#" class="btn-2 add-to-cart">Añadir al carrito</a>
+        </div>
+        </section>
+
+<!-- Reseñas de los clientes -->
+        <br><br>
+            <section class="ofert container">
+                <div class="ofert-1">
+                <div class="testimonials">
+                <div class="testimonial">
+                    <h3>Excelente producto</h3>
+                    <p>"Me encantaron las verduras frescas, son de muy buena calidad y a un precio accesible."</p>
+                    <p class="customer-name">- Ana García</p>
+                </div>
+                <div class="testimonial">
+                    <h3>Muy buen servicio</h3>
+                    <p>"El servicio al cliente fue excepcional, resolvieron todas mis dudas rápidamente."</p>
+                    <p class="customer-name">- Juan Pérez</p>
+                </div>
+                <div class="testimonial">
+                    <h3>Producto de Belleza</h3>
+                    <p>"Este rimel es maravilloso. No irrita mis ojos y deja las pestañas muy bonitas. Además, es ecológico."</p>
+                    <p class="customer-name">- Lucía Kellen</p>
+                </div>
+                <div class="testimonial">
+                    <h3>Producto de Cocina</h3>
+                    <p>"Estos envases son muy prácticos y seguros. Mantienen la comida fresca por más tiempo y no absorben olores."</p>
+                    <p class="customer-name">- Marta García</p>
+                </div>
+                </div>
+            </section>
+<br><br>
+
+<!-- Comentarios para el registro de un cliente -->
+        <section class="ofert container">
+            <div class="ofert-1">
+            <form id="testimonial-form">
+            <h3>Deja tu reseña</h3>
+            <div>
+                <label for="review">Reseña:</label><br>
+                <textarea id="review" name="review" rows="4" cols="50"></textarea>
+            </div>
+            <div>
+                <label for="customer-name">Tu nombre:</label><br>
+                <input type="text" id="customer-name" name="customer-name">
+            </div>
+            <button type="submit">Enviar</button>
+        </form>
+        </div>
+    </section>
+
+<br><br>
+
+<!-- Créditos -->
+        <footer>
+    <p>&copy; 2024 Tienda de Productos Naturales. Todos los derechos reservados. Irene Frías Ramos</p>
+</footer>
+
+<script src="script.js"></script> 
+</body>
+</html>

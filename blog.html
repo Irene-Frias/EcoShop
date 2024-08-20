@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="title" content="Tienda de Productos Naturales"/>
+    <meta name="description" content="Las mejores marcas de productos de parafarmacia, cosmética natural, dietética y medicina natural. ¡Consulta todas las ofertas y promociones de Naturitas!"/>
+    <meta name="keywords" content="parafarmacia, cosmética natural, alimentación bio, productos para la salud, productos bienestar"/>
+    <meta name="robots" content="INDEX,FOLLOW"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <title>ECOLÓGICO</title>
+    <link rel="icon" href="imagenes/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+<!-- Contenido de la página -->
+<header class="header">
+    <div class="menu container">
+        <img src="imagenes/logo.png" id="logo" alt="logo" class="logo" style="width: 82px; height: 82px;">
+        <input type="checkbox" id="menu-toggle" />
+        <label for="menu-toggle" class="menu-icon">
+            <img src="imagenes/menu.png" alt="menu">
+        </label>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="info.html">Información</a></li>
+            </ul>
+        </nav>
+        <img src="imagenes/carrito.png" id="carrito-icon" alt="carrito" style="width: 70px; height: 70px; cursor: pointer;">
+        <div id="carrito-dropdown" class="cart-dropdown" style="display: none;">
+            <table id="lista-carrito">
+                <thead>
+                    <tr>
+                        <th>Imagen</th>
+                        <th>Nombre</th>
+                        <th>Precio</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <a href="#" id="ver-carrito" class="btn-2">Ver carrito</a>
+        </div>
+    </div>
+        </div>
+    </div>
+</header>
+<br>
+</br>
+
+<!-- FINALIZACIÓN DE LA COMPRA -->
+
+<div id="checkout-modal" class="modal" style="display: none;">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Finalizar Compra</h2>
+        <form id="checkout-form">
+            <label for="account-number">Número de Cuenta:</label>
+            <input type="text" id="account-number" name="account-number" required>
+            
+            <label for="payment-method">Método de Pago:</label>
+            <select id="payment-method" name="payment-method" required>
+                <option value="credit-card">Tarjeta de Crédito</option>
+                <option value="paypal">PayPal</option>
+                <option value="bank-transfer">Transferencia Bancaria</option>
+            </select>
+            
+            <div id="credit-card-info" style="display: none;">
+                <label for="cc-number">Número de Tarjeta:</label>
+                <input type="text" id="cc-number" name="cc-number">
+                <label for="cc-expiry">Fecha de Expiración (MM/AA):</label>
+                <input type="text" id="cc-expiry" name="cc-expiry">
+                <label for="cc-cvc">CVC:</label>
+                <input type="text" id="cc-cvc" name="cc-cvc">
+            </div>
+
+            <button type="submit" class="btn-2">Enviar</button>
+        </form>
+    </div>
+</div>
+
+<section id="carrito-completo" class="cart-full container" style="display: none;">
+    <h2>Carrito de Compras</h2>
+    <table id="carrito-lista-completa">
+        <thead>
+            <tr>
+                <th>Imagen</th>
+                <th>Nombre</th>
+                <th>Precio</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <p id="total-precio"></p>
+    <a href="#" class="btn-2" id="checkout-btn">Finalizar Compra</a>
+</section>
+
+<!-- Consejos para una vida saludable -->
+<section class="blog container">
+    <div class="blog-1">
+        <img src="imagenes/blog/vidasana.png" alt="vida_sana" width="800" height="5">
+        <div class="container">
+            <h3>CONSEJOS PARA UNA VIDA SALUDABLE</h3>
+            <article style="text-align: left;">
+            <h4>Mantén una Dieta Balanceada:</h4>
+            <ul>
+                <li>Incluye una variedad de alimentos en tu dieta diaria: frutas, verduras, proteínas, granos enteros y grasas saludables.</li>
+                <li>Evita el consumo excesivo de alimentos procesados, azúcares y grasas saturadas.</li>
+                <li>Mantén una hidratación adecuada bebiendo suficiente agua a lo largo del día.</li>
+            </ul>
+            </article>
+
+            <article style="text-align: left;">
+            <h4>Realiza Actividad Física Regular:</h4>
+            <ul>
+                <li>Dedica al menos 30 minutos al día a realizar alguna actividad física, como caminar, correr, nadar o practicar yoga.</li>
+                <li>Incorpora ejercicios de fuerza y flexibilidad en tu rutina para mantener músculos y articulaciones saludables.</li>
+                <li>Encuentra una actividad que disfrutes para mantener la motivación a largo plazo.</li>
+            </ul>
+            </article>
+
+            <article style="text-align: left;">
+            <h4>Prioriza el Descanso y el Sueño:</h4>
+            <ul>
+                <li>Asegúrate de dormir entre 7 y 9 horas cada noche para permitir que tu cuerpo se recupere y se regenere.</li>
+                <li>Mantén una rutina de sueño regular y crea un ambiente propicio para dormir bien.</li>
+                <li>Evita el uso de dispositivos electrónicos antes de dormir y trata de relajarte con actividades tranquilas.</li>
+            </ul>
+            </article>
+
+            <article style="text-align: left;">
+            <h4>Cuida tu Salud Mental:</h4>
+            <ul>
+                <li>Practica técnicas de relajación como la meditación, la respiración profunda o el mindfulness.</li>
+                <li>Establece conexiones sociales significativas y mantén relaciones saludables con amigos y familiares.</li>
+                <li>No dudes en buscar apoyo profesional si sientes que lo necesitas. La salud mental es tan importante como la salud física.</li>
+            </ul>
+            </article>
+    
+            <article style="text-align: left;">
+            <h4>Mantén un Peso Saludable:</h4>
+            <ul>
+                <li>Combina una dieta equilibrada con ejercicio regular para mantener un peso adecuado para tu cuerpo.</li>
+                <li>Evita las dietas extremas y enfócate en hábitos sostenibles y saludables a largo plazo.</li>
+            </ul>
+            </article>
+
+            <article style="text-align: left;">
+            <h4>Evita el Consumo de Tabaco y Alcohol:</h4>
+            <ul>
+                <li>Elimina el tabaco de tu vida y reduce o evita el consumo de alcohol para mejorar tu salud general.</li>
+                <li>Busca apoyo si necesitas ayuda para dejar de fumar o reducir el consumo de alcohol.</li>
+            </ul>
+            </article>
+
+            <article style="text-align: left;">
+            <h4>Realiza Chequeos Médicos Regulares:</h4>
+            <ul>
+                <li>Programa revisiones médicas periódicas para detectar posibles problemas de salud a tiempo.</li>
+                <li>Sigue las recomendaciones y tratamientos de tu médico para mantener tu salud en óptimas condiciones.</li>
+            </ul>
+            </article>
+
+            <article style="text-align: left;">    
+            <h4>Hidrátate Adecuadamente:</h4>
+            <ul>
+                <li>Bebe al menos 8 vasos de agua al día para mantener tu cuerpo bien hidratado.</li>
+                <li>Limita el consumo de bebidas azucaradas y con cafeína.</li>
+            </ul>
+            </article>
+    
+            <article style="text-align: left;">
+            <h4>Escucha a tu Cuerpo:</h4>
+            <ul>
+                <li>Presta atención a las señales que te envía tu cuerpo y no ignores síntomas o malestares.</li>
+                <li>Aprende a reconocer cuándo necesitas descansar y cuándo es seguro esforzarte más.</li>
+            </ul>
+            </article>
+
+            <article style="text-align: left;">
+            <h4>Establece Metas Realistas:</h4>
+            <ul>
+                <li>Establece objetivos alcanzables para tu salud y bienestar.</li>
+                <li>Celebra tus logros y ajusta tus metas según sea necesario.</li>
+            </ul>
+            </article>
+
+        </div>
+    </div>
+
+<!-- Beneficios de productos ecológicos -->
+    <div class="blog-1">
+        <img src="imagenes/blog/beneficios.png" alt="beneficios" width="600" height="5">
+        <h3>BENEFICIOS DE PPRODUCTOS ECOLÓGICOS</h3>
+        <div class="container">
+            <article style="text-align: left;">
+            <h4>1. Salud y Bienestar:</h4>
+            <ul>
+                <li>Los productos ecológicos están libres de pesticidas y químicos tóxicos, reduciendo el riesgo de enfermedades y alergias.</li>
+                <li>Contienen más nutrientes y antioxidantes, mejorando la salud general y el sistema inmunológico.</li>
+            </ul>
+            </article>
+
+            <article style="text-align: left;">
+            <h4>2. Medio Ambiente:</h4>
+            <ul>
+                <li>La agricultura ecológica promueve la biodiversidad y mejora la calidad del suelo, el agua y el aire.</li>
+                <li>Reduce la contaminación y la huella de carbono, contribuyendo a la lucha contra el cambio climático.</li>
+            </ul>
+        </article>
+
+        <article style="text-align: left;">
+            <h4>3. Bienestar Animal:</h4>
+            <ul>
+                <li>Los animales criados de manera ecológica viven en condiciones más naturales y humanas, con acceso a aire libre y dietas naturales.</li>
+                <li>Se evita el uso de antibióticos y hormonas de crecimiento, promoviendo la salud y el bienestar de los animales.</li>
+            </ul>
+            </article>
+
+            <article style="text-align: left;">
+            <h4>4. Sabor y Calidad:</h4>
+            <ul>
+                <li>Los productos ecológicos suelen tener un sabor más auténtico y natural, ya que se cultivan en suelos ricos y fértiles.</li>
+                <li>Son frescos y de temporada, lo que garantiza su calidad y frescura.</li>
+            </ul>
+            </article>
+    
+            <article style="text-align: left;">
+            <h4>5. Sostenibilidad Económica:</h4>
+            <ul>
+                <li>Apoyar a los productores ecológicos contribuye al desarrollo de la economía local y a la sostenibilidad a largo plazo.</li>
+                <li>Fomenta prácticas agrícolas sostenibles y justas, beneficiando a las comunidades rurales.</li>
+            </ul>
+            </article>
+
+            <article style="text-align: left;">
+            <h4>6. Seguridad Alimentaria:</h4>
+            <ul>
+                <li>Los productos ecológicos están sujetos a estrictas normas de producción y certificación, asegurando su calidad y seguridad.</li>
+                <li>Ofrecen transparencia y trazabilidad, permitiendo a los consumidores conocer el origen de sus alimentos.</li>
+            </ul>
+            </article>
+            <br>
+            <img src="imagenes/blog/productosbio.png" alt="productos" width="800" height="20">
+            <br>
+            <br>
+            <article style="text-align: left;">
+        <p>Son incuestionables los grandes beneficios que ofrecen los alimentos ecológicos, 
+            donde han generado el progresivo aumento de su consumo por parte de un 
+            porcentaje cada vez mayor de la población que apuestan por los productos bio.
+            Como hemos observado, el consumo de productos ecológicos viene precedido 
+            generalmente por consumidores que se preocupan por su bienestar y salud, 
+            por lo que es complicado conocer si realmente previenen enfermedades como 
+            el cáncer, pero si es cierto que ayudan a llevar una vida más saludable, 
+            controlada, además de ser productos de mayor calidad, donde aportan numerosos 
+            beneficios para nuestro organismo, algo que no sucede con los alimentos 
+            transgénicos.</p>
+            </article>
+            <br>
+
+        </div>
+    </div>
+
+<!-- Recetas ecológicas -->
+    <div class="blog-1">
+        <br>
+        <img src="imagenes/blog/recetas.png" alt="recetas" width="600" height="20">
+        <div class="container margin-left">
+            <h3>RECETAS ECOLÓGICAS</h3>
+    <br>
+            <h4 style="text-align: left;">ENSALADA DE QUINOA Y VEGETALES</h4>
+            <article style="text-align: left;">
+                <h4>Ingredientes:</h4>
+                <ul>
+                    <li>1 taza de quinoa orgánica</li>
+                    <li>2 tazas de agua</li>
+                    <li>1 pepino orgánico, cortado en cubos</li>
+                    <li>1 pimiento rojo orgánico, cortado en tiras</li>
+                    <li>1 zanahoria orgánica, rallada</li>
+                    <li>1 aguacate orgánico, cortado en rodajas</li>
+                    <li>1 puñado de hojas de espinaca orgánica</li>
+                    <li>Jugo de limón orgánico, al gusto</li>
+                    <li>Sal y pimienta negra, al gusto</li>
+                </ul>
+            </article>
+    
+            <article style="text-align: left;">
+                <h4>Instrucciones:</h4>
+                <ol>
+                    <li>
+                        <img src="imagenes/blog/quinoa.png" alt="quinoa" width="370" height="370" class="right-image">
+                        En un tazón grande, combina la quinoa cocida, el pepino, el pimiento rojo, la zanahoria,
+                        <br>el aguacate y las hojas de espinaca.</li>
+                    <li>Lava la quinoa bajo agua fría para eliminar el sabor amargo.</li>
+                    <li>En una olla, cocina la quinoa con el agua a fuego medio durante 15-20 minutos o hasta 
+                        <br>que esté tierna.</li>
+                    <li>Deja enfriar la quinoa cocida.</li>
+                    <li>Exprime jugo de limón sobre la ensalada y sazona con sal y pimienta al gusto.</li>
+                    <li>Mezcla bien todos los ingredientes y sirve la ensalada de quinoa y vegetales en platos 
+                        <br>individuales.</li>
+                </ol>
+            </article>
+    
+            <article style="text-align: left;">
+                <p>¡Disfruta de esta deliciosa ensalada ecológica como plato principal o acompañamiento! Puedes 
+                    <br>agregar otros ingredientes frescos y orgánicos según tu preferencia.</p>
+            </article>
+    
+            <div class="clear"></div>
+            <h4 style="text-align: left;">ENSALADA DE PASTA INTEGRAL</h4>
+            <article style="text-align: left;">
+                <h4>Ingredientes:</h4>
+                <ul>
+                    <li>250 gr. de pasta integral</li>
+                    <li>100 gr. de olivas verdes</li>
+                    <li>100 gr. de olivas negras</li>
+                    <li>Un puñado de hojas de rúcula ecológica</li>
+                    <li>50 gr de queso feta</li>
+                    <li>Sal</li>
+                    <li>Pimienta</li>
+                    <li>Aceite de oliva</li>
+                    <li>Unas gotas de limón</li>
+                </ul>
+            </article>
+    
+            <article style="text-align: left;">
+                <h4>Preparación:</h4>
+                <img src="imagenes/blog/pasta.png" alt="pasta" width="370" height="370" class="right-image">
+                <ol>
+                    <li>Para preparar esta receta ecológica, la pasta debe ser integral, la forma es 
+                        <br>indiferente, sirven corbatas, macarrones, etc. Los fideos deben cocerse en 
+                        <br>abundante agua hirviendo con algo de sal, siguiendo las instrucciones que 
+                        <br>indica el paquete. Una vez cocidos, se cuelan y se reservan, ya que deben 
+                        <br>estar a temperatura ambiente para preparar la ensalada.</li>
+                    <li>La rúcula se lava muy bien (elegir una que proceda de la agricultura ecológica) 
+                        <br>y el queso se corta en trozos del tamaño de un bocado.</li>
+                    <li>Al adquirir las aceitunas, comprobar que son de cultivo eco, en cuanto al tipo, 
+                        <br>aliño y a que sean con o sin hueso, dependerá del gusto de los comensales.</li>
+                    <li>Finalmente y para culminar esta receta ecológica, se mezclan en un bol todos los 
+                        <br>ingredientes, se salpimienta, se echa un chorro de aceite de oliva y unas gotas 
+                        <br>de limón y se sirve.</li>
+                </ol>
+            </article>
+            <br>
+            <h4 style="text-align: left;">TORTITAS NATURALES</h4>
+            <article style="text-align: left;">
+                <h4>Ingredientes:</h4>
+                <ul>
+                    <li>1 cucharada de azúcar</li>
+                    <li>8 gr. de levadura</li>
+                    <li>1 pizca de sal</li>
+                    <li>200 ml de leche</li>
+                    <li>1 huevo</li>
+                    <li>1 cucharadita de mantequilla</li>
+                </ul>
+            </article>
+    
+            <article style="text-align: left;">
+                <h4>Instrucciones:</h4>
+                <ol>
+                    <li>
+                        <img src="imagenes/blog/tortitas.png" alt="tortitas" width="370" height="370" class="right-image">
+                        En un tazón grande, combina la quinoa cocida, el pepino, el pimiento rojo, la zanahoria,
+                        <br>el aguacate y las hojas de espinaca.</li>
+                    <li>Lava la quinoa bajo agua fría para eliminar el sabor amargo.</li>
+                    <li>En una olla, cocina la quinoa con el agua a fuego medio durante 15-20 minutos o hasta 
+                        <br>que esté tierna.</li>
+                    <li>Deja enfriar la quinoa cocida.</li>
+                    <li>Exprime jugo de limón sobre la ensalada y sazona con sal y pimienta al gusto.</li>
+                    <li>Mezcla bien todos los ingredientes y sirve la ensalada de quinoa y vegetales en platos 
+                        <br>individuales.</li>
+                </ol>
+            </article>
+                <br><br><br>
+
+
+
+        </div>
+</section>
+
+<!-- Créditos -->
+<footer>
+    <p>&copy; 2024 Tienda de Productos Naturales. Todos los derechos reservados. Irene Frías Ramos</p>
+</footer>
+
+<script src="script.js"></script> 
+</body>
+</html>
