@@ -41,7 +41,7 @@ EcoShop/
   </br> Explore the product catalog, add items to the cart and experience the shopping experience.
 
 ## 📈 Future Improvements
-- Inside the development
+- Inside the development:
   </br>It would have been better to sort by page with its corresponding images,...
 - Integration with payment API:
   </br>Connect the store with payment services,...
