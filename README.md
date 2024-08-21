@@ -1,20 +1,31 @@
 # EcoShop
 ## 📁 Project Structure
-**EcoShop**
-</br>
-│ ├── **img/**
-</br> 
-│ ├── **videos/**
-</br>
-├── **index.html**
-</br>
-├── **styles.css** 
-</br>
-├── **script.js**
-</br>
-├── **...**
-</br>
+```
+EcoShop/
+├── imagenes/
+│   ├── carrito.png
+│   ├── logo.png
+│   ├── offers.png
+│   ├── blog/
+│   ├── ofertas/
+│   ├── productos/
+│   └── servicios/
+├── videos/
+│   ├── cuidado personal.mp4
+│   └── general.mp4
+├── index.html
+├── styles.css
+├── script.js
+├── blog.html
+├── comida.html
+├── cuidado-personal.html
+├── info.html
+├── login.html
+├── productos.html
+├── servicios.html
+├── suplementos.html
 └── **README.md** 
+```
 
 ## 🚀 Installation and Use
 - Clone the repository:
@@ -30,6 +41,8 @@
   </br> Explore the product catalog, add items to the cart and experience the shopping experience.
 
 ## 📈 Future Improvements
+- Inside the development
+  </br>It would have been better to sort by page with its corresponding images,...
 - Integration with payment API:
   </br>Connect the store with payment services,...
 - Administration panel:
@@ -41,7 +54,7 @@
 If you have ideas to improve the store, feel free to fork the project and submit a pull request.
 
 ## 👩‍💻 Developer
-Irene Frias Ramos - Junior Developer
+Irene Frias Ramos
 <br> </br>
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/IreneFrías/)
 [![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:irene5frias@gmail.com)
