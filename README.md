@@ -42,3 +42,4 @@ Si tienes ideas para mejorar la tienda, no dudes en hacer un fork del proyecto y
 Irene Frías Ramos - Desarrolladora Junior
 <br> </br>
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/IreneFrías/)
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:irene5frias@gmail.com)
