@@ -1,6 +1,6 @@
-# Tienda
+# EcoShop
 ## 📁 Estructura del Proyecto
-**Tienda**
+**EcoShop**
 </br>
 │  ├── **img/**              *(imágenes de productos y otros recursos gráficos)*
 </br> 
