@@ -4,7 +4,7 @@
 </br>
 │  ├── **img/**              *(imágenes de productos y otros recursos gráficos)*
 </br> 
-│  ├── **videos/**           *(imágenes de productos y otros recursos gráficos)*
+│  ├── **videos/**           *(videos y otros recursos gráficos)*
 </br>
 ├── **index.html**          *(página principal de la tienda)*
 </br>
