@@ -1,45 +1,47 @@
 # EcoShop
-## 📁 Estructura del Proyecto
+## 📁 Project Structure
 **EcoShop**
 </br>
-│  ├── **img/**              *(imágenes de productos y otros recursos gráficos)*
+│ ├── **img/**
 </br> 
-│  ├── **videos/**           *(videos y otros recursos gráficos)*
+│ ├── **videos/**
 </br>
-├── **index.html**          *(página principal de la tienda)*
+├── **index.html**
 </br>
-├── **styles.css**          *(estilos principales de la tienda)*
+├── **styles.css** 
 </br>
-├── **script.js**           *(lógica del carrito de compras y funcionalidades de la tienda)*
+├── **script.js**
 </br>
-├── **...**                 *(otros archivos referentes a la página principal)*
+├── **...**
 </br>
-└── **README.md**           *(este archivo)*
+└── **README.md** 
 
-## 🚀 Instalación y Uso
-- Clonar el repositorio:
+## 🚀 Installation and Use
+- Clone the repository:
   </br>
-``` git clone https://github.com/Irene-Frias/EcoShop.git ```
+```
+  git clone https://github.com/Irene-Frias/EcoShop.git
   </br>
-``` cd EcoShop ```
-- Abrir el proyecto:
-  </br>Abre index.html en tu navegador favorito.
-- Navegar y explorar:
-  </br> Explora el catálogo de productos, agrega artículos al carrito y experimenta la experiencia de compra.
+  EcoShop cd
+  ```
+- Open the project:
+  </br>Open index.html in your favorite browser.
+- Browse and explore:
+  </br> Explore the product catalog, add items to the cart and experience the shopping experience.
 
-## 📈 Futuras Mejoras
-- Integración con API de pago:
-  </br>Conectar la tienda con servicios de pago,...
-- Panel de administración:
-  </br>Implementar un sistema para la gestión de productos y órdenes.
-- Base de datos:
-  </br>Contactar con la tienda para introduccir el registro de los productos en la base de datos para gestionar los inventarios y el registro del usuario.
+## 📈 Future Improvements
+- Integration with payment API:
+  </br>Connect the store with payment services,...
+- Administration panel:
+  </br>Implement a system for product and order management.
+- Database:
+  </br>Contact the store to enter the product registration in the database to manage inventories and user registration.
 
-## 📝 Aportaciones
-Si tienes ideas para mejorar la tienda, no dudes en hacer un fork del proyecto y enviar un pull request.
+## 📝 Contributions
+If you have ideas to improve the store, feel free to fork the project and submit a pull request.
 
-## 👩‍💻 Desarrolladora
-Irene Frías Ramos - Desarrolladora Junior
+## 👩‍💻 Developer
+Irene Frias Ramos - Junior Developer
 <br> </br>
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/IreneFrías/)
 [![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:irene5frias@gmail.com)
