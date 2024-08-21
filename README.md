@@ -1,4 +1,12 @@
 # EcoShop
+## 📖 About
+It is an online store of ecological products designed to promote a sustainable lifestyle. This project, developed with HTML, CSS and JavaScript, offers an intuitive shopping experience, allowing users to explore and purchase environmentally friendly products.
+
+## 🌟 Features
+- **HTML:** provides the structure and content of the website.
+- **CSS:** implements a responsive design that adapts to different screen sizes, offering a seamless experience across all devices.
+- **JavaScript:** adds interactivity to the site, including dynamic elements like product filtering, shopping cart management, and smooth navigation for enhanced user experience.
+
 ## 📁 Project Structure
 ```
 EcoShop/
