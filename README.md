@@ -19,9 +19,9 @@
 ## 🚀 Instalación y Uso
 - Clonar el repositorio:
   </br>
-``` git clone https://github.com/Irene-Frias/tienda.git ```
+``` git clone https://github.com/Irene-Frias/EcoShop.git ```
   </br>
-``` cd tienda ```
+``` cd EcoShop ```
 - Abrir el proyecto:
   </br>Abre index.html en tu navegador favorito.
 - Navegar y explorar:
